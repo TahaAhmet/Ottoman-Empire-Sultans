@@ -31,6 +31,8 @@ This webpage includes:
 ---
 
 ## 📂 Project Structure
+
+```
 Ottoman-Empire-Sultans/
 │── index.html          # Main structure with Bootstrap grid
 │── styles.css          # Custom animations, card styling & typography
@@ -43,6 +45,7 @@ Ottoman-Empire-Sultans/
     ├── ...
     ├── SultanMehmedVI.jpg
     └── favicon.ico
+```
 
 ---
 
