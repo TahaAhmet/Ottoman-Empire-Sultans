@@ -1,0 +1,197 @@
+body {
+    background: linear-gradient(135deg, #1b263b, #001219, #001f3f); 
+    background-size: 400% 400%;
+    margin: 0;
+    min-height: 100vh;
+    animation: gradient-animation 18s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gradient-background {
+    background-color: transparent; 
+    text-align: center;
+    padding: 3rem 1rem 1.5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.title-text {
+    font-family: 'Cinzel', serif; 
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    background: linear-gradient(45deg, #FFD700, #DAA520, #BF953F); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.4), 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1200px; 
+    height: 420px;
+    width: 100%;
+    padding: 5px; 
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1); 
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 5px rgba(255, 255, 255, 0.2);
+    border-radius: 16px; 
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.9); 
+}
+
+.flip-card-front {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container {
+    height: 72%; 
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.8s ease;
+}
+
+.flip-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-content {
+    height: 28%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff; 
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+    z-index: 2;
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+    margin-top: 36px;
+}
+
+.btn-modern {
+    background: linear-gradient(90deg, #34495e 0%, #2c3e50 100%); /* Derin Lacivert */
+    border: none;
+    border-radius: 50px; 
+    color: white;
+    padding: 6px 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(44, 62, 80, 0.4); 
+    width: auto;
+    min-width: 100px;
+}
+
+.btn-modern:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(44, 62, 80, 0.6);
+    background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%);
+}
+
+.btn-modern:active {
+    transform: translateY(1px);
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Hafif Açık Gri/Krem */
+    color: #2c3e50;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #d4af37; 
+}
+
+.flip-card-back h5 {
+    font-family: 'Cinzel', serif;
+    color: #8e44ad; 
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.separator {
+    width: 30px;
+    height: 2px;
+    background: #d4af37; 
+    margin-bottom: 15px;
+    border-radius: 2px;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #34495e; 
+}
+
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer h5 {
+    color: #cfcfcf;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #8ab4f8; 
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #bcd3ff;
+}
+
